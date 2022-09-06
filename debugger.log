@@ -1,0 +1,67 @@
+[06-09-2022 15:51:52][INFO] Bot: Answers4You Bot [@answers4youbot]
+[06-09-2022 15:51:52][WARNING] Updates were skipped successfully.
+[06-09-2022 15:51:52][INFO] Start polling.
+[06-09-2022 15:56:18][ERROR] Task exception was never retrieved
+future: <Task finished name='Task-176' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=MessageNotModified('Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message')>
+Traceback (most recent call last):
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 107, in notify
+    data.update(await check_filters(handler_obj.filters, args))
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\filters\filters.py", line 72, in check_filters
+    f = await execute_filter(filter_, args)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\filters\filters.py", line 56, in execute_filter
+    return await filter_.filter(*args, **filter_.kwargs)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\filters\filters.py", line 161, in __call__
+    return await self.check(*args)
+  File "D:\AПроекты\ТРАХАЮ ВСЕОСВИТУ И НАУРОК\filter.py", line 65, in check
+    await dip.bot.edit_message_text("Бот находится на тех обслуживании\nПереношу вас в меню .", call.from_user.id, call.message.message_id)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\bot.py", line 2735, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\base.py", line 231, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageNotModified: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+[06-09-2022 15:56:27][ERROR] Task exception was never retrieved
+future: <Task finished name='Task-199' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=MessageNotModified('Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message')>
+Traceback (most recent call last):
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 107, in notify
+    data.update(await check_filters(handler_obj.filters, args))
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\filters\filters.py", line 72, in check_filters
+    f = await execute_filter(filter_, args)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\filters\filters.py", line 56, in execute_filter
+    return await filter_.filter(*args, **filter_.kwargs)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\filters\filters.py", line 161, in __call__
+    return await self.check(*args)
+  File "D:\AПроекты\ТРАХАЮ ВСЕОСВИТУ И НАУРОК\filter.py", line 65, in check
+    await dip.bot.edit_message_text("Бот находится на тех обслуживании\nПереношу вас в меню .", call.from_user.id, call.message.message_id)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\bot.py", line 2735, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\base.py", line 231, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "C:\Users\sples\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageNotModified: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
